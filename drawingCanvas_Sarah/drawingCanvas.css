@@ -1,8 +1,9 @@
 body {
-  background: rgb(214, 247, 248);
-  color: cadetblue;
+  text-align: center;
+  background-color: #ce4257;
+  color: #4f000b;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 h3 {
@@ -10,33 +11,27 @@ h3 {
 }
 
 nav {
-  /*ok*/
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: cadetblue;
+  background-color: #720026;
   padding: 5px;
-  text-align: center;
 }
 
 #sentence {
-  /*ok*/
   width: 100%;
 }
 
 #instruction {
-  /*ok*/
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #sentenceInput {
-  /*ok*/
   margin-top: -10px;
   margin-bottom: 10px;
   font-size: larger;
 }
 
 .page-wrapper {
-  /*ok*/
   display: flex;
   flex-wrap: wrap;
   margin: 0 2rem;
@@ -45,8 +40,7 @@ nav {
 /* —————————〈  C A N V A S  〉——————————— */
 
 canvas {
-  /*ok*/
-  border: 5px solid cadetblue;
+  border: 5px solid #4f000b;
   border-radius: 10px;
   cursor: pointer;
   width: 98%;
@@ -55,49 +49,44 @@ canvas {
 /*---————〈 C O L O R  F I E L D S,  B U T T O N S  &  S L I D E R S 〉————----*/
 
 .tools {
-  /*ok aber noch nicht responsive*/
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background: rgb(153, 201, 202);
-  border: 5px solid cadetblue;
+  background: #720026;
+  border: 5px solid #4f000b;
   border-radius: 10px;
 }
 
 .tools .color-field {
-  /*ok*/
   align-self: center;
   height: 100px;
   width: 100px;
   cursor: pointer;
   box-sizing: border-box;
-  border: 3px solid cadetblue;
+  border: 3px solid #4f000b;
   border-radius: 20px;
   margin: 10px;
 }
 
 .tools .color-field:hover {
-  /*ok*/
-  border: 5px solid cadetblue;
+  border: 5px solid #4f000b;
 }
 
 button {
-  /*ok*/
   width: 100px;
   height: 40px;
-  border: 5px solid cadetblue;
+  border: 5px solid #4f000b;
   border-radius: 10px;
   cursor: pointer;
   color: white;
   margin: 0px 5px 0px 0px;
-  background-color: cadetblue;
+  background-color: #4f000b;
   font-weight: bold;
 }
 
 button:hover {
-  /*ok*/
-  background-color: rgb(153, 201, 202);
-  border: 5px solid rgb(153, 201, 202);
+  background-color: #720026;
+  border: 5px solid #720026;
 }
 
 #buttons {
@@ -106,17 +95,15 @@ button:hover {
 }
 
 .color-picker {
-  /*ok*/
   margin: 0 10px;
   height: 100px;
   width: 100%;
-  border: 5px solid cadetblue;
+  border: 5px solid #4f000b;
   border-radius: 10px;
   background: transparent;
 }
 
 .pen-range {
-  /*ok*/
   width: 100%;
   margin: 0 10px;
   -webkit-appearance: none;
@@ -124,41 +111,37 @@ button:hover {
   appearance: none;
   border-radius: 10px;
   height: 25px;
-  background: cadetblue;
+  background: #4f000b;
   outline: none;
 }
 
 .pen-range::-webkit-slider-thumb {
-  /*ok*/
   -webkit-appearance: none;
   appearance: none;
   width: 20px;
   height: 20px;
-  border: 5px solid rgb(214, 247, 248);
+  border: 5px solid #ce4257;
   border-radius: 50%;
-  background: rgb(214, 247, 248);
+  background: #ce4257;
   cursor: pointer;
 }
 
 .pen-range::-moz-range-thumb {
-  /*ok*/
   width: 20px;
   height: 20px;
-  border: 5px solid rgb(214, 247, 248);
+  border: 5px solid #ce4257;
   border-radius: 50%;
-  background: rgb(214, 247, 248);
+  background: #ce4257;
   cursor: pointer;
 }
 
 /* —————————〈 E N D 〉——————————— */
 
 #footer {
-  /*ok*/
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 20px;
-  text-align: center;
 }
 
 @media (min-width: 850px) {
@@ -177,11 +160,6 @@ button:hover {
     margin-bottom: 5px;
     width: 100%;
     height: fit-content;
-  }
-  canvas {
-    /* width: 98%; */
-    /* height: 200px; */
-    /* height: max-content; */
   }
   .tools {
     flex-direction: row;
