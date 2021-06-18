@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>GUILLOTINE</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="dwfStyle.css" />
+</head>
+
+<body>
+    <nav>
+        <h3><b>GUILLOTINE</b></h3>
+    </nav>
+    <div class="flexContainer">
+        <div class=flexBox>
+            <span>
+                <h1>Willkommen zu <br>"GUILLOTINE"!</h1>
+                <p>Unser Projekt für das Fach Konzeption (MKB4) ist eine interaktive
+                    Real-Time-Anwendung, bei der man
+                    gemeinsam mit Freunden online malen und raten kann.
+
+                    <br><br>Die Anwendung ähnelt dem bekannten Spiel "Stille Post", aber wir gehen noch einen Schritt
+                    weiter:<br>
+                    Anstatt einen Satz nur durch Flüstern weiterzugeben, muss dieser gemalt werden. Anschließend muss
+                    die entstandene Zeichnung wiederum als Satz interpretiert werden.
+
+                    <br>Je nach Anzahl der Spieler*innen wechseln sich Zeichnen und Erraten ab, bis am Ende ein oft sehr
+                    lustiges Ergebnis entsteht.
+
+                    <br>Die Zeichnungen können anschließend auch heruntergeladen werden, um sich an lustige Spielrunden
+                    erinnern zu können.
+                </p>
+            </span>
+            <img src="canvas.png">
+        </div>
+        <div class=flexBox>
+            <img src="landingPage.png">
+            <span>
+                <h1>Unsere Arbeitsweise:</h1>
+                <p>Zunächst haben wir beide uns in der Ideenfindungsphase mit verschiedenen Entwürfen beschäftigt und
+                    unsere ursprüngliche Idee, eine Art Galgenmännchen-Anwendung, aufgrund mangelnder
+                    Real-Time-Interaktionsmögllichkeiten für die User*innen (unsere Projektvorgabe) wieder verworfen.
+                    <br><br>
+                    Seit wir uns auf unsere aktuelle Idee festgelegt haben, kümmert sich Sarah hauptsächlich um das
+                    Front-End und das Design (HTML, CSS), während Angelina sich mit dem Back-End der Anwendung
+                    auseinandersetzt.
+                    Dabei programmiert sie die Funktionalität der verschiedenen HTML-Seiten sowie einen Server und eine
+                    Datenbankanbindung für unser Online-Spiel (JavaScript, node.js, Heroku, MongoDB).
+                    <br><br>
+                    Aktuell arbeiten wir zwar noch an unserer Anwendung, aber der zentrale Aspekt des Malens ist bereits
+                    umgesetzt und kann gerne kreativ genutzt werden! Klickt dazu einfach ganz unten auf den Link :)
+                </p>
+            </span>   
+        </div>
+        <div class=flexBox>
+            <span>
+                <h1>Woran arbeiten wir noch?</h1>
+                <p>Wir präsentieren nachfolgend einige Screenshots zum aktuellen Stand unserer Anwendung. <br><br>
+                    Momentan existiert bereits eine Serverstruktur (aktuell noch lokal gehostet), bei der ein User sich
+                    in einen Game-Room einloggen und anschließend ein Bild malen kann. <br>
+                    Dieses Bild wird dann per JSON an eine Datenbank geschickt und gespeichert.<br>
+                    Die JSON-Datei kann auch schon wieder aufgerufen werden, allerdings lässt sie sich aktuell noch
+                    nicht wieder in eine Bild-Datei umwandeln.
+                    <br><br>
+                    Wir arbeiten daran, unser Projekt in den kommenden Wochen möglichst lauffähig zu entwickeln und
+                    hoffen, am Ende ein lustiges Spiel präsentieren zu können :)
+
+                </p>
+            </span>
+            <img src="Bild1.png">
+        </div>
+        <div class=flexBox>
+            <img src="Bild2.png">
+            <img src="Bild2_2.png">
+        </div>
+        <div class=flexBox>
+            <img src="Bild3.png">
+            <img src="Bild4.png">
+        </div>
+        <!-- <div class=flexBox2>
+            
+        </div> -->
+        <img id=lastOne src="Bild5.png">
+        <div id="link">
+            <a href="https://sarahmohring.github.io/Konzeption_SoSe21/drawingCanvas_Sarah/drawingCanvas.html">HIER
+                SELBER MALEN!</a>
+        </div>
+    </div>
+    <footer id="footer">
+        &#169; 2021 by Sarah Mohring & Angelina Weibert, HFU
+    </footer>
+</body>
+
+</html>
