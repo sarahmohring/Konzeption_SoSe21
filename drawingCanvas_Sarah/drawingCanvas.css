@@ -145,7 +145,6 @@ button:hover {
 }
 
 @media (min-width: 850px) {
-  /*??? */
   .tools {
     max-width: 30%;
     max-height: 100%;
