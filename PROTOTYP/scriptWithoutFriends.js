@@ -105,7 +105,8 @@ var WithoutFriends;
     }
     function downloadDrawing() {
         let canvas = document.querySelector("canvas");
-        let dataURL = canvas.toDataURL();
+        let image = canvas.toDataURL("image/png");
+        window.location.href = image;
     }
 })(WithoutFriends || (WithoutFriends = {}));
 //# sourceMappingURL=scriptWithoutFriends.js.map

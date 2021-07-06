@@ -134,6 +134,8 @@ namespace WithoutFriends {
     function downloadDrawing(): void {
 
         let canvas: HTMLCanvasElement = <HTMLCanvasElement>document.querySelector("canvas");
-        let dataURL: string = canvas.toDataURL();
+
+        let image: string = canvas.toDataURL("image/png");  
+        window.location.href = image;
     }
 }
