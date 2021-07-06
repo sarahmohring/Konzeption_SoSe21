@@ -138,7 +138,7 @@ namespace WithoutFriends {
     }
 
     function playAnotherGame(_event: PointerEvent): void {
-
+        
         // reload page
         location.reload();
 
