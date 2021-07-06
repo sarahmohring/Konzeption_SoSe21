@@ -27,26 +27,6 @@ saveButton.addEventListener("pointerup", save);
 let restoreArray = [];
 let index = -1;
 
-
-/* ----———————————————〈 E V E N T - L I S T E N E R 〉———————————————-—--- */
-
-/*   for    */ /*      Tablet      *//*    user    */
-// canvas.addEventListener("touchstart", start, false);
-// canvas.addEventListener("touchmove", draw, false);
-// canvas.addEventListener("touchend", stop, false);
-// canvas.addEventListener("touchcancel", stop, false);
-// /*  for Tablet user *//*  for Tablet user *//*  for Tablet user */
-
-// canvas.addEventListener("mousedown", start, false);
-// canvas.addEventListener("mousemove", draw, false);
-// canvas.addEventListener("mouseup", stop, false);
-// canvas.addEventListener("mouseout", stop, false);
-
-canvas.addEventListener("pointerdown", start, false);
-canvas.addEventListener("pointermove", draw, false);
-canvas.addEventListener("pointerup", stop, false);
-canvas.addEventListener("pointerout", stop, false);
-
 // source: G. Rausch
 var colorPickers = document.querySelectorAll(".color-field");
 for (var i = 0; i < colorPickers.length; i++) {
@@ -55,6 +35,15 @@ for (var i = 0; i < colorPickers.length; i++) {
     // is not needed
     colorPicker.addEventListener("pointerup", changeColor, false);
 }
+
+
+/* ----———————————————〈 E V E N T - L I S T E N E R 〉———————————————-—--- */
+
+canvas.addEventListener("pointerdown", start, false);
+canvas.addEventListener("pointermove", draw, false);
+canvas.addEventListener("pointerup", stop, false);
+canvas.addEventListener("pointerout", stop, false);
+
 
 /* ----———————————————〈 F U N C T I O N S 〉———————————————-—--- */
 
@@ -68,6 +57,7 @@ function start(_event) { // prepare to draw
         _event.clientY - canvas.getBoundingClientRect().top);
     _event.preventDefault();
 }
+
 /*———————————---------* DRAW *---------————————————*/
 
 function draw(_event) {  // actually draw
@@ -83,6 +73,7 @@ function draw(_event) {  // actually draw
     _event.preventDefault();
 
 }
+
 /*——————————---------* STOP *---------—————————————*/
 
 function stop(_event) {
