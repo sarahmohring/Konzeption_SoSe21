@@ -107,12 +107,9 @@ var WithoutFriends;
         window.location.href = image;
     }
     function playAnotherGame(_event) {
-        // hide last page, display new page
-        // let letsGetStarted: HTMLDivElement = <HTMLDivElement>document.getElementById("letsGetStarted");
-        // letsGetStarted.style.display = "initial";
-        // let yourResults: HTMLDivElement = <HTMLDivElement>document.getElementById("yourResults");
-        // yourResults.style.display = "none";
+        // reload page
         location.reload();
+        // reset all forms
         let form = document.getElementById("form");
         form.reset();
         let form2 = document.getElementById("form2");
