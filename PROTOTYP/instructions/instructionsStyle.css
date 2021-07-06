@@ -1,0 +1,163 @@
+body {
+    background-color: #ce4257;
+    text-align: center;
+    color: #4f000b;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+nav {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #720026;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+#flexContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.main {
+    width: 27%;
+    margin: 0 auto;
+    background-color: #720026;
+    border-radius: 10px;
+}
+
+.icon {
+    width: 65%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#players {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.flexPlayers {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 80%;
+    vertical-align: middle;
+}
+
+.names {
+    color: white;
+    background-color: #4f000b;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    height: 50px;
+}
+
+#player4, #player5 {
+    opacity: 0.4;
+}
+
+#instrButton {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+#instructions {
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+.p {
+    padding: 50px 0px 30px 0px;
+}
+
+.img {
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 7px;
+    border: 5px solid #ce4257;
+    border-radius: 10px;
+}
+
+hr {
+    width: 75%;
+    color: #4f000b;
+}
+
+#startPlaying {
+    color: white;
+    background-color: #4f000b;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 20%;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#startPlaying:hover {
+    background-color: #720026;
+    cursor: pointer;
+}
+
+#wait {
+    margin-top: 20px;
+    color: white;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+}
+
+@media (max-width: 850px) {
+    #flexContainer {
+        flex-direction: column;
+    }
+    #instructions {
+        flex-direction: column;
+    }
+    #players {
+        width: 100%;
+    }
+    #instrButton {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    .main {
+        width: 90%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .icon {
+        height: 80px;
+    }
+    .names {
+        margin-top: 15px;
+    }
+    nav {
+        margin-bottom: 10px;
+    }
+    #startPlaying {
+        width: 50%;
+        margin-top: 10px;
+    }
+    #wait {
+        margin-top: 0px;
+    }
+}

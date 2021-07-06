@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Draw This Sentence!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="drawingCanvas.css" />
+    <script src="drawingCanvas.js" defer=""></script>
+</head>
+
+<body>
+    <nav>
+        <h3><b>DRAWING WITH FRIENDS</b></h3>
+    </nav>
+    <div class="page-wrapper">
+        <div id="sentence">
+            <p id="instruction"><b>DRAW THIS SENTENCE:</b></p>
+            <div id="sentenceInput">A giraffe rides a tandem bike.</div>
+        </div>
+        <div id="canvas-input">
+            <canvas id="canvas"> </canvas>
+            <div id=buttons>
+                <button id="undo" type="button" class="button">Undo</button>
+                <button id="clear" type="button" class="button">Clear</button>
+                <button id="save" type="button" class="button">Save</button>
+            </div>
+        </div>
+        <div class="tools">
+            <div class="color-field" datacolor="#000000" style="background:#000000;"></div>
+            <div class="color-field" datacolor="#ffffff" style="background:#ffffff;"></div>
+            <div class="color-field" datacolor="#d6b49d" style="background:#d6b49d;"></div>
+            <div class="color-field" datacolor="#ac0000" style="background:#ac0000;"></div>
+            <div class="color-field" datacolor="#d67317" style="background:#d67317;"></div>
+            <div class="color-field" datacolor="#eccf02" style="background:#eccf02;"></div>
+            <div class="color-field" datacolor="#03bf3e" style="background:#03bf3e;"></div>
+            <div class="color-field" datacolor="#002bcd" style="background:#002bcd;"></div>
+            <div class="color-field" datacolor="#9d03a2" style="background:#9d03a2;"></div>
+
+            <input onInput="draw_color = this.value" type="color" class="color-picker" value="#5f9ea0"></input>
+            <input type="range" name="Slider" min="1" max="60" value="10" step="5" class="pen-range"
+                onInput="draw_width = this.value"></input>
+        </div>
+    </div>
+    <footer id="footer">
+        &#169; 2021 by Sarah Mohring & Angelina Weibert, HFU
+    </footer>
+</body>
+
+</html>

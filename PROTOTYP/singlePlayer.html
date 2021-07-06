@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Without Friends!</title>
+    <link rel="stylesheet" href="letsGetStartedStyle.css">
+    <script src="drawingCanvas.js" defer=""></script>
+    <script src="scriptWithoutFriends.js"></script>
+</head>
+
+<body>
+    <nav>
+        <h3><b>DRAWING WITHOUT FRIENDS - PROTOTYPE </b></h3>
+    </nav>
+    <!-- LET'S GET STARTED -->
+    <div id="letsGetStarted">
+        <h1>LET'S GET STARTED</h1>
+        <fieldset id="fieldset1">
+            <form id="form">
+                <label>ENTER YOUR NAME:</label>
+                <input class="input1" type="text" name="Name" placeholder="Your Name">
+                <label>HOW MANY FRIENDS WILL PLAY? - SORRY, PROTOTYPE!</label>
+                <input class="input1" type="number" name="Stepper" step="1" min="1" max="1" value="1">
+            </form>
+        </fieldset>
+        <div id="seeHowItWorks">
+            <p><b>SEE HOW IT WORKS!</b></p>
+        </div>
+    </div>
+
+
+    <!-- INSTRUCTIONS -->
+    <div id="instrPage">
+        <div id=flexContainerInstr>
+            <div id=players>
+                <div class=flexPlayers id=player1>
+                    <img class=icon src="instructions/icon.png">
+                    <div class=names id="name1">
+                        <p><b>PLAYER 1</b></p>
+                    </div>
+                </div>
+                <div class=flexPlayers id=player2>
+                    <img class=icon src="instructions/icon.png">
+                    <div class=names id="name2">
+                        <p><b>PLAYER 2</b></p>
+                    </div>
+                </div>
+                <div class=flexPlayers id=player3>
+                    <img class=icon src="instructions/icon.png">
+                    <div class=names id="name3">
+                        <p><b>PLAYER 3</b></p>
+                    </div>
+                </div>
+                <div class=flexPlayers id=player4>
+                    <img class=icon src="instructions/icon.png">
+                    <div class=names id="name4">
+                        <p><b>PLAYER 4</b></p>
+                    </div>
+                </div>
+                <div class=flexPlayers id=player5>
+                    <img class=icon src="instructions/icon.png">
+                    <div class=names id="name5">
+                        <p><b>PLAYER 5</b></p>
+                    </div>
+                </div>
+            </div>
+            <div id=instrButton>
+                <div id=instructions>
+                    <div class=main id=instructions1>
+                        <p class=p>WRITE A SENTENCE
+                            <hr><br><br> the weirder the better!
+                        </p>
+                        <img class="img" src="instructions/write.png">
+                    </div>
+                    <div class=main id=instructions2>
+                        <img class="img" src="instructions/draw.png">
+                        <p class=p>DRAW YOUR OWN SENTENCE
+                            <hr><br><br> be creative!
+                        </p>
+                    </div>
+                    <div class=main id=instructions3>
+                        <p class=p>GUESS WHAT YOU JUST DREW
+                            <hr><br><br> it would be way more fun with friends...
+                        </p>
+                        <img class="img" src="instructions/guess.png">
+                    </div>
+                </div>
+                <div id="startPlaying">
+                    <p><b>START PLAYING!</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WRITE A SENTENCE -->
+    <div id="writeASentence">
+        <fieldset id="fieldset2">
+            <form id="form2">
+                <label>
+                    <h1>WRITE A SENTENCE:</h1>
+                </label>
+                <input type="text" name="Name" placeholder="...">
+            </form>
+            <div id="createGame">
+                <h2><b>&#10003;</b></h2>
+            </div>
+        </fieldset>
+    </div>
+
+    <!-- DRAWING CANVAS -->
+    <div id="drawingCanvas">
+        <div class="page-wrapper">
+            <div id="sentence">
+                <p id="instruction"><b>DRAW THIS SENTENCE:</b></p>
+                <div id="sentenceInput">A giraffe rides a tandem bike.</div>
+            </div>
+            <div id="canvas-input">
+                <canvas id="canvas"></canvas>
+                <div id=buttons>
+                    <button id="undo" type="button" class="button">Undo</button>
+                    <button id="clear" type="button" class="button">Clear</button>
+                    <button id="save" type="button" class="button">Save</button>
+                </div>
+            </div>
+            <div class="tools">
+                <div class="color-field" datacolor="#000000" style="background:#000000;"></div>
+                <div class="color-field" datacolor="#ffffff" style="background:#ffffff;"></div>
+                <div class="color-field" datacolor="#d6b49d" style="background:#d6b49d;"></div>
+                <div class="color-field" datacolor="#ac0000" style="background:#ac0000;"></div>
+                <div class="color-field" datacolor="#d67317" style="background:#d67317;"></div>
+                <div class="color-field" datacolor="#eccf02" style="background:#eccf02;"></div>
+                <div class="color-field" datacolor="#03bf3e" style="background:#03bf3e;"></div>
+                <div class="color-field" datacolor="#002bcd" style="background:#002bcd;"></div>
+                <div class="color-field" datacolor="#9d03a2" style="background:#9d03a2;"></div>
+
+                <input onInput="draw_color = this.value" type="color" class="color-picker" value="#5f9ea0"></input>
+                <input type="range" name="Slider" min="1" max="60" value="10" step="5" class="pen-range"
+                    onInput="draw_width = this.value"></input>
+            </div>
+        </div>
+    </div>
+
+    <!-- GUESS DRAWING -->
+    <div id="guessDrawing">
+        <div id="flexContainer">
+            <div id="leftside">
+                <canvas id="drawn"></canvas>
+            </div>
+            <div id=rightside>
+                <fieldset id="fieldset3">
+                    <form id="form3">
+                        <label>
+                            <h1 id="describeH1">DESCRIBE THIS DRAWING:</h1>
+                        </label>
+                        <input type="text" name="Name" placeholder="...">
+                    </form>
+                    <div id="send">
+                        <h2><b>&#10003;</b></h2>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+
+    <!-- YOUR RESULTS -->
+    <div id="yourResults">
+        <div id=flexContainerResults>
+            <div id=results>
+                <div class=mainResults id=result1>
+                    <h4>IMAGINARY FRIEND #1:</h4>
+                    <p><q>Original Sentence</q></p>
+                    <img class="img" src="yourResults/elephant.png">
+                    <h4>IMAGINARY FRIEND #2:</h4>
+                    <p><q>Guessed Sentence</q></p>
+                    <a href="yourResults/elephant.png" download="download">
+                        <img class="dl" src="yourResults/download.png">
+                    </a>
+                </div>
+                <div class=mainResults id=result2>
+                    <h4 id=yourName>YOU:</h4>
+                    <p id="writtenSentence">"Original Sentence"</p>
+                    <canvas id="drawingResult"></canvas>
+                    <h4 id="yourNameAgain">YOU AGAIN:</h4>
+                    <p id="guessedSentence">"Guessed Sentence"</p>
+                    <a href="javascript:canvas.toDataURL('image/png');" download="download">
+                        <img id="yourDownload" class="dl" src="yourResults/download.png">
+                    </a>
+                </div>
+                <div class=mainResults id=result3>
+                    <h4>IMAGINARY FRIEND #2:</h4>
+                    <p><q>Original Sentence</q></p>
+                    <img class="img" src="yourResults/face.png">
+                    <h4>IMAGINARY FRIEND #1:</h4>
+                    <p><q>Guessed Sentence</q></p>
+                    <a href="yourResults/face.png" download="download">
+                        <img class="dl" src="yourResults/download.png">
+                    </a>
+                </div>
+            </div>
+            <div id="playAgain">
+                <p><b>PLAY AGAIN!</b></p>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        &#169; 2021 by Sarah Mohring & Angelina Weibert, HFU
+    </footer>
+</body>
+
+</html>
