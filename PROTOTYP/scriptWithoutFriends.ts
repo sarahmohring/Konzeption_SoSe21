@@ -135,6 +135,5 @@ namespace WithoutFriends {
 
         let canvas: HTMLCanvasElement = <HTMLCanvasElement>document.querySelector("canvas");
         let dataURL: string = canvas.toDataURL();
-        console.log(dataURL);
     }
 }

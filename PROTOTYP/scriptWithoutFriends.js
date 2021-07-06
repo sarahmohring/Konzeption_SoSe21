@@ -106,7 +106,6 @@ var WithoutFriends;
     function downloadDrawing() {
         let canvas = document.querySelector("canvas");
         let dataURL = canvas.toDataURL();
-        console.log(dataURL);
     }
 })(WithoutFriends || (WithoutFriends = {}));
 //# sourceMappingURL=scriptWithoutFriends.js.map
