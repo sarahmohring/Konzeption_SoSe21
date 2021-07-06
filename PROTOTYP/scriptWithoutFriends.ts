@@ -33,8 +33,6 @@ namespace WithoutFriends {
         // hide last page, display new page
         let instructions: HTMLDivElement = <HTMLDivElement>document.getElementById("instrPage");
         instructions.style.display = "none";
-        let yourResults: HTMLDivElement = <HTMLDivElement>document.getElementById("yourResults");
-        yourResults.style.display = "none";
         let writeASentence: HTMLDivElement = <HTMLDivElement>document.getElementById("writeASentence");
         writeASentence.style.display = "initial";
 
@@ -128,7 +126,7 @@ namespace WithoutFriends {
 
         // create button to start again
         let playAgain: HTMLDivElement = <HTMLDivElement>document.getElementById("playAgain");
-        playAgain.addEventListener("pointerup", displayWriteSentence);
+        playAgain.addEventListener("pointerup", playAnotherGame);
     }
 
     function downloadDrawing(): void {
@@ -137,5 +135,24 @@ namespace WithoutFriends {
 
         let image: string = canvas.toDataURL("image/png");  
         window.location.href = image;
+    }
+
+    function playAnotherGame(_event: PointerEvent): void {
+        // hide last page, display new page
+        // let letsGetStarted: HTMLDivElement = <HTMLDivElement>document.getElementById("letsGetStarted");
+        // letsGetStarted.style.display = "initial";
+
+        // let yourResults: HTMLDivElement = <HTMLDivElement>document.getElementById("yourResults");
+        // yourResults.style.display = "none";
+
+        location.reload();
+        let form: HTMLFormElement = <HTMLFormElement>document.getElementById("form");
+        form.reset(); 
+
+        let form2: HTMLFormElement = <HTMLFormElement>document.getElementById("form2");
+        form2.reset(); 
+
+        let form3: HTMLFormElement = <HTMLFormElement>document.getElementById("form3");
+        form3.reset(); 
     }
 }

@@ -26,8 +26,6 @@ var WithoutFriends;
         // hide last page, display new page
         let instructions = document.getElementById("instrPage");
         instructions.style.display = "none";
-        let yourResults = document.getElementById("yourResults");
-        yourResults.style.display = "none";
         let writeASentence = document.getElementById("writeASentence");
         writeASentence.style.display = "initial";
         // create button to go to next page
@@ -101,12 +99,26 @@ var WithoutFriends;
         download.addEventListener("pointerup", downloadDrawing);
         // create button to start again
         let playAgain = document.getElementById("playAgain");
-        playAgain.addEventListener("pointerup", displayWriteSentence);
+        playAgain.addEventListener("pointerup", playAnotherGame);
     }
     function downloadDrawing() {
         let canvas = document.querySelector("canvas");
         let image = canvas.toDataURL("image/png");
         window.location.href = image;
+    }
+    function playAnotherGame(_event) {
+        // hide last page, display new page
+        // let letsGetStarted: HTMLDivElement = <HTMLDivElement>document.getElementById("letsGetStarted");
+        // letsGetStarted.style.display = "initial";
+        // let yourResults: HTMLDivElement = <HTMLDivElement>document.getElementById("yourResults");
+        // yourResults.style.display = "none";
+        location.reload();
+        let form = document.getElementById("form");
+        form.reset();
+        let form2 = document.getElementById("form2");
+        form2.reset();
+        let form3 = document.getElementById("form3");
+        form3.reset();
     }
 })(WithoutFriends || (WithoutFriends = {}));
 //# sourceMappingURL=scriptWithoutFriends.js.map
